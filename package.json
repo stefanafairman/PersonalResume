@@ -1,0 +1,20 @@
+{
+  "name": "personalresume",
+  "version": "1.0.0",
+  "description": "Website that highlights my skills and projects as a developer.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stefanafairman/PersonalResume.git"
+  },
+  "author": "Stefana Fairman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stefanafairman/PersonalResume/issues"
+  },
+  "homepage": "https://github.com/stefanafairman/PersonalResume#readme"
+}
