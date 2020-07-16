@@ -1,4 +1,65 @@
 
+@import "compass/css3";
+@import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,400italic|Montserrat:400,700);
+@import "compass/reset";
+* {
+    box-sizing: border-box;
+}
+.wrap {
+    width: 50%;
+    margin: 0 auto;
+}
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.5em;
+    padding: 0.5em 0;
+    margin-bottom: 1em;
+    border-bottom: 1px solid #F7C331;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.bar {
+    background: #F7882F;
+    width: 0;
+    margin: 0.25em 0;
+    color: #DCC7AA;
+    position: relative;
+    transition: width 2s, background 0.2s;
+    -webkit-transform: translate3d(0, 0, 0);
+    clear: both;
+}
+.bar:nth-of-type(2n) {
+    background: #F7C331;
+}
+.bar .label {
+    font-size: 0.75em;
+    padding: 1em;
+    background: #393f4d;
+    width: 8em;
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+.bar .label.light {
+    background: #393f4d;
+}
+.count {
+    position: absolute;
+    right: 0.25em;
+    top: 0.75em;
+    padding: 0.15em;
+    font-size: 0.75em;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 body {
     font-family: 'Poppins', sans-serif;

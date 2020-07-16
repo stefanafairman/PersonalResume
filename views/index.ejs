@@ -70,16 +70,33 @@
     
         <!-- Page Content  -->
         <div id="content">
-    
             <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="container-fluid">
-    
                     <button type="button" id="sidebarCollapse" class="navbar-btn btn">
                         <i class="fas fa-align-left"></i>
                     </button>
+
+                    <div class="wrap">
+                        <h1>Animated Bar Graphs</h1>
+                        <div class="holder">
+                            <div class="bar cf" data-percent="90%">
+                                <span class="label light">HTML</span>
+                            </div>
+                            <div class="bar cf" data-percent="70%">
+                                <span class="label">CSS</span>
+                            </div>
+                            <div class="bar cf" data-percent="60%">
+                                <span class="label light">jQuery</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
+                    
             </nav>
         </div>
+
+        
     </div>
 
     <!-- jQuery CDN - Slim version (=without AJAX) -->
@@ -98,6 +115,30 @@
             });
         
         });
+
+        setTimeout(function start (){
+  
+            $('.bar').each(function(i){  
+                var $bar = $(this);
+                $(this).append('<span class="count"></span>')
+                setTimeout(function(){
+                $bar.css('width', $bar.attr('data-percent'));      
+                }, i*100);
+            });
+
+            $('.count').each(function () {
+                $(this).prop('Counter',0).animate({
+                    Counter: $(this).parent('.bar').attr('data-percent')
+                }, {
+                    duration: 2000,
+                    easing: 'swing',
+                    step: function (now) {
+                        $(this).text(Math.ceil(now) +'%');
+                    }
+                });
+            });
+
+        }, 500)
     </script>
 </body>
 
